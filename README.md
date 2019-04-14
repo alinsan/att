@@ -1,2 +1,2 @@
 # att
-AT &amp; T Hackathon
+AT&amp;T Hackathon
