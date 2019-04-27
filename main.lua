@@ -131,7 +131,7 @@ widget.setTheme(myApp.theme)
 -- to the table.  By using this technique, I can quickly pass data between 
 -- composer scenes.  It's like making them global without the penalties of 
 -- making them global.  There is one catch... Corona Labs could come along and 
--- add theor own "displayMode" member (or any of them) later and trump yours
+-- add their own "displayMode" member (or any of them) later and trump yours
 -- but the risk is minmal.
 --
 
@@ -176,7 +176,7 @@ function myApp.showScreen5()
     myApp.tabBar:setSelected(5)
     local options = {
 
-        pageTitle = "Corona Headquarters"
+        pageTitle = "Locations"
     }
     composer.removeHidden()
     composer.gotoScene("mapscene", {time=250, effect="crossFade", params = options})
@@ -187,7 +187,7 @@ function myApp.showScreen6()
     myApp.tabBar:setSelected(6)
     local options = {
 
-        pageTitle = "Data Table"
+        pageTitle = "Events List"
     }
     composer.removeHidden()
     composer.gotoScene("datatable", {time=250, effect="crossFade", params = options})
@@ -223,7 +223,7 @@ end
 
 local tabButtons = {
     {
-        label = "Featured",
+        label = "HOME",
         defaultFile = "images/tabbaricon.png",
         overFile = "images/tabbaricon-down.png",
         labelColor = { 
@@ -236,7 +236,7 @@ local tabButtons = {
         selected = true,
     },
     {
-        label = "By Date",
+        label = "FEED",
         defaultFile = "images/tabbaricon.png",
         overFile = "images/tabbaricon-down.png",
         labelColor = { 
@@ -247,18 +247,22 @@ local tabButtons = {
         height = 32,
         onPress = myApp.showScreen2,
     },
+
+----
+
     {
-        label = "Gallery",
+        label = "PROFILE",
         defaultFile = "images/tabbaricon.png",
         overFile = "images/tabbaricon-down.png",
         labelColor = { 
             default = { 0.25, 0.25, 0.25 }, 
-            over = { 0.768, 0.516, 0.25 }
+           over = { 0.768, 0.516, 0.25 }
         },
         width = 32,
         height = 32,
-        onPress = myApp.showScreen3,
+       onPress = myApp.showScreen3,
     },
+
 --    {
 --      label = "Video",
 --      defaultFile = "images/tabbaricon.png",
@@ -271,20 +275,23 @@ local tabButtons = {
 --      height = 32,
 --      onPress = myApp.showScreen4,
 --  },
+
+--  **MAP IS DISPLAYING AN ERROR**
+
+--    {
+--        label = "MAP",
+--      defaultFile = "images/tabbaricon.png",
+--      overFile = "images/tabbaricon-down.png",
+--      labelColor = { 
+--          default = { 0.25, 0.25, 0.25 }, 
+--          over = { 0.768, 0.516, 0.25 }
+--      },
+--      width = 32,
+--      height = 32,
+--      onPress = myApp.showScreen5,
+--  },
     {
-        label = "Map",
-        defaultFile = "images/tabbaricon.png",
-        overFile = "images/tabbaricon-down.png",
-        labelColor = { 
-            default = { 0.25, 0.25, 0.25 }, 
-            over = { 0.768, 0.516, 0.25 }
-        },
-        width = 32,
-        height = 32,
-        onPress = myApp.showScreen5,
-    },
-    {
-        label = "Data",
+        label = "CREATE",
         defaultFile = "images/tabbaricon.png",
         overFile = "images/tabbaricon-down.png",
         labelColor = { 

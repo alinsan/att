@@ -76,12 +76,13 @@ function scene:create( event )
     sceneGroup:insert(navBar)
 
 -- "translate" aka move the navBar
-	navBar:translate( 0, -25 ) 
+	navBar:translate( 0, -15 ) 
 
 
-	local myImage2 = display.newImageRect("5680344133_sml_cropped.jpg", 380, 58)
+	local myImage2 = display.newImageRect("events-divStepandrepeat.jpg", 760, 225)
 	sceneGroup:insert(myImage2)
-	myImage2:translate( 150, 70 )
+	myImage2:translate( 180, 110 )
+	myImage2:scale( 0.5, 0.5 )
 
 
     local button1 = widget.newButton({
@@ -100,7 +101,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button1)
     button1.x = display.contentCenterX
-    button1.y = display.contentCenterY - 160
+    button1.y = display.contentCenterY - 100
 
 
     local button2 = widget.newButton({
@@ -119,7 +120,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button2)
     button2.x = display.contentCenterX
-    button2.y = display.contentCenterY - 90
+    button2.y = display.contentCenterY - 40
 
 
     local button3 = widget.newButton({
@@ -138,7 +139,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button3)
     button3.x = display.contentCenterX
-    button3.y = display.contentCenterY - 20
+    button3.y = display.contentCenterY + 25
 
     local button4 = widget.newButton({
     	width = 160,
@@ -156,7 +157,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button4)
     button4.x = display.contentCenterX
-    button4.y = display.contentCenterY + 40
+    button4.y = display.contentCenterY + 90
 
     local button5 = widget.newButton( {
         width = 160,
@@ -174,7 +175,7 @@ function scene:create( event )
     } )
     sceneGroup:insert(button5)
     button5.x = display.contentCenterX
-    button5.y = display.contentCenterY + 110
+    button5.y = display.contentCenterY + 160
 
 --[[
     local button6 = widget.newButton( {

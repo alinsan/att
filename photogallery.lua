@@ -82,12 +82,25 @@ function scene:create( event )
     sceneGroup:insert(background)
 
     local navBar = widget.newNavigationBar({
-        title = "Photo Gallery",
+        title = "Profile Gallery",
         backgroundColor = { 0.96, 0.62, 0.34 },
         titleColor = {1, 1, 1},
-        font = myApp.fontBold
+        font = myApp.fontBold,
+        rightButton = {
+---
+       	label = "UserID",
+            id = "UserID",
+            onEvent = addButtonListener,
+            labelAlign = "right",        	
+        }
     })
     sceneGroup:insert(navBar)
+
+
+-- "translate" aka move the navBar
+	navBar:translate( 0, -10 ) 
+
+
 
     local row = 0
     local col = 0
@@ -128,6 +141,11 @@ function scene:create( event )
 			col = 0
 		end
 		sceneGroup:insert(photosThumbGroups[i])
+
+-- "translate" aka move the photosThumbGroups
+--	photosThumbGroups[1]:translate( 0, 0 ) 
+
+
 
     end
     print("Memory", system.getInfo("textureMemoryUsed") / (1024 * 1024))

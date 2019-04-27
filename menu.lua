@@ -77,7 +77,7 @@ function scene:create( event )
 	background:addEventListener("touch", ignoreTouch)
 
     local navBar = widget.newNavigationBar({
-        title = "MAIN EVENTS",
+        title = "SUNDAY FUNDAY",
         backgroundColor = { 0.96, 0.62, 0.14 },
         titleColor = {1, 1, 1},
         font = myApp.fontBold
@@ -85,11 +85,12 @@ function scene:create( event )
     sceneGroup:insert(navBar)
 
 -- "translate" aka move the navBar
-	navBar:translate( 0, -25 ) 
+	navBar:translate( 0, -15 ) 
 
-	local myImage = display.newImageRect("video-embed-example-crop.jpg", 360, 176)
-	sceneGroup:insert(myImage)
-	myImage:translate( 150, 120 ) 
+	local myImage2 = display.newImageRect("eventsbanner.jpg", 800, 225)
+	sceneGroup:insert(myImage2)
+	myImage2:translate( 180, 110 )
+	myImage2:scale( 0.5, 0.5 )
 
 
 --    local button1 = widget.newButton({
@@ -127,7 +128,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button3)
     button3.x = display.contentCenterX
-    button3.y = display.contentCenterY - 20
+    button3.y = display.contentCenterY - 80
 
     local button4 = widget.newButton({
     	width = 160,
@@ -145,7 +146,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button4)
     button4.x = display.contentCenterX
-    button4.y = display.contentCenterY + 40
+    button4.y = display.contentCenterY - 20
 
     local button5 = widget.newButton( {
         width = 160,
@@ -163,7 +164,7 @@ function scene:create( event )
     } )
     sceneGroup:insert(button5)
     button5.x = display.contentCenterX
-    button5.y = display.contentCenterY + 105
+    button5.y = display.contentCenterY + 40
 
 
     local button2 = widget.newButton({
@@ -182,7 +183,7 @@ function scene:create( event )
     })
     sceneGroup:insert(button2)
     button2.x = display.contentCenterX
-    button2.y = display.contentCenterY + 170
+    button2.y = display.contentCenterY + 110
 
 
 

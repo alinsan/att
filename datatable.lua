@@ -208,7 +208,7 @@ function scene:create( event )
         titleColor = {1, 1, 1},
         font = myApp.fontBold,
         rightButton = {
-        	label = "Add",
+       	label = "Add",
             id = "add",
             onEvent = addButtonListener,
             labelAlign = "right",        	

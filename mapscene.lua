@@ -85,7 +85,7 @@ local function addStarbucks( event , id )
 end
 
 local function mapLocationHandler(event)
-	myMap:setCenter( event.latitude, event.longitude, false )
+	myMap:setCenter( event.latitude, event.longitude,  0.25, 0.25, false )
     myMap:setRegion( event.latitude, event.longitude, 0.25, 0.25, false)
     print("adding office marker")
     local options = { 
